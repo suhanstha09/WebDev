@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css check hanam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        details {
+            margin-top: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        progress, meter {
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>    
+    <a href="cat.jpg" download="cat.jpg">Download Image of Cat</a>
+    <br>
+    <br>
+    <div contenteditable="true">Editable Text</div>
+    
+    <input list="cars" name="car" >
+    <datalist id="cars">
+        <option value="Select Cars" disabled selected></option>        
+        <option value="Volvo">
+        <option value="Ferrari">
+        <option value="Mercedes">
+    </datalist>
+    <br><br>
+    </input>
+    <br><br>
+    <a href="https://www.instagram.com/alwaysferozali" target="_blank">My Instagram</a>
+    <br>
+    <img src="cat.jpg" alt="loading" loading="lazy">
+    <details>
+        <summary>Click to see more</summary>
+        <p>This is a paragraph inside the details element. It provides additional information that can be toggled.</p>
+        <p>More content can be added here, such as links, images, or any other HTML elements.</p>
+    </details>
+    <details>
+        <summary>Clic for another</summary>
+        <p>message you want to show here .This is a paragraph inside the details element. It provides additional information that can be toggled.</p>
+        <p>More content can be added here, such as links, images, or any other HTML elements.</p>
+    </details>
+    <br>
+    <progress value="65" max="100">65%</progress>
+    <br>
+    <meter value="0.6" min="0" max="1">60%</meter>
+    <br>
+    <meter value=".45">45%</meter>
+</body>
+</html>
