@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url(netflix.jpg) center center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            margin: auto;
+            padding: 0 20px;
+            transform: translateX(-100%);
+            animation: slideRight 1s ease-in-out forwards;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            width: 150px;
+            z-index: 4;
+        }
+        .sign-in-btn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            background: #e50914;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            z-index: 4;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            transform: translateX(-100%);
+            animation: slideRight 1.2s ease-in-out forwards;
+        }
+        .email-form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .email-form input[type="email"] {
+            padding: 16px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 2px;
+            width: 300px;
+            max-width: 100%;
+            outline: none;
+        }
+        .email-form button {
+            padding: 16px 30px;
+            font-size: 1.1rem;
+            background: #e50914;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .email-form button:hover {
+            background: #f40612;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1rem; }
+            .logo { width: 100px; left: 20px; top: 15px; }
+            .sign-in-btn { right: 20px; top: 15px; padding: 6px 12px; font-size: 0.9rem; }
+            .email-form input[type="email"] { width: 180px; }
+
+            .cards-section {
+                padding: 30px 0;
+            }
+            .cards-row {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .card {
+                max-width: 100%;
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Card Section Styles */
+        .cards-section {
+            background: #000;
+            padding: 60px 0;
+            border-top: 8px solid #222;
+            border-bottom: 8px solid #222;
+        }
+        .cards-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #111;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+            overflow: hidden;
+            max-width: 340px;
+            flex: 1 1 300px;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            transition: transform 0.2s;
+
+            width: 300px;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .card:hover {
+            transform: scale(1.075);
+        }
+        .card img {
+            width: 100%;
+            max-width: 220px;
+            margin-bottom: 24px;
+            border-radius: 4px;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .card-desc {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #ccc;
+        }
+
+/* .cards-row .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 24px;
+    border-radius: 4px;
+} */
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo">
+        <button class="sign-in-btn">Sign In</button>
+        <div class="hero-content">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <h2>Watch anywhere. Cancel anytime.</h2>
+            <p style="font-size:1.2rem; margin-bottom:20px;">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="email-form">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Get Started &gt;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Netflix Cards Section -->
+    <section class="cards-section">
+        <div class="cards-row">
+            <div class="card">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="Enjoy on your TV">
+                <div class="card-title">Enjoy on your TV</div>
+                <div class="card-desc">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</div>
+            </div>
+            <div class="card">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Download your shows">
+                <div class="card-title">Download your shows to watch offline</div>
+                <div class="card-desc">Save your favorites easily and always have something to watch.</div>
+            </div>
+            <div class="card">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="Watch everywhere">
+                <div class="card-title">Watch everywhere</div>
+                <div class="card-desc">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trending Now Section -->
+    <section class="cards-section" style="padding-top:40px;">
+        <h2 style="color:#fff; font-size:2rem; font-weight:700; margin-bottom:30px; text-align:center;">Trending Now</h2>
+        <div class="cards-row">
+            <div class="card">
+                <img src="strangerthings.jpg" alt="Stranger Things">
+                <div class="card-title">Stranger Things</div>
+                <div class="card-desc">A group of kids uncover supernatural mysteries in their small town.</div>
+            </div>
+            <div class="card">
+                <img src="moneyheist.jpg" alt="Money Heist">
+                <div class="card-title">Money Heist</div>
+                <div class="card-desc">A criminal mastermind plans the biggest heist in history.</div>
+            </div>
+            <div class="card">
+                <img src="thewitcher.jpg" alt="The Witcher">
+                <div class="card-title">The Witcher</div>
+                <div class="card-desc">A monster hunter struggles to find his place in a world where people are often more wicked than beasts.</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
