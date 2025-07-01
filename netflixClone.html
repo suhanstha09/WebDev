@@ -198,6 +198,75 @@
     margin-bottom: 24px;
     border-radius: 4px;
 } */
+
+/* cards wrappers */
+
+        .wrapper {
+            display: flex;
+            height: 63vh;
+            background-color: #f0f0f0;
+        }
+        .my-box {
+            background-color: #fff;
+            height: 50vh;
+            width: 300px;
+            margin: 20px 20px 20px 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .my-box:hover {
+            transform: scale(1.075);
+            cursor: pointer;
+        }
+        .img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+        }
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .my-box {
+                width: 90%;
+                margin: 20px 0;
+            }
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        button:hover {
+            background-color: #e4e4e4;
+            color: black;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -258,5 +327,33 @@
             </div>
         </div>
     </section>
+    <div class="wrapper">
+        <div class="my-box" id="card1" >
+            <h1>Cards Row</h1>
+            <div class="img" style="background-image: url(cat.jpg);"></div>
+            <p>This is a simple example of a row of cards.</p>
+            <button>View Details</button>
+        </div>
+        <div class="my-box" id="card2">
+            <h1>Card 2</h1>
+            <div class="img">
+                <img src="moneyheist.jpg" alt="moneyheistImage">
+            </div>
+            <p>This is another card in the row.</p>
+            <button>View Details</button>
+        </div>
+        <div class="my-box" id="card3">
+            <h1>Card 3</h1>
+            <div class="img" style="background-image: url(strangerthings.jpg);"></div>
+            <p>This is yet another card in the row.</p>
+            <button>View Details</button>
+        </div>
+        <div class="my-box" id="card4">
+            <h1>Card 4</h1>
+            <div class="img" style="background-image: url(thewitcher.jpg);"></div>
+            <p>This is the last card in the row.</p>
+            <button>View Details</button>
+        </div>
+    </div>
 </body>
 </html>
