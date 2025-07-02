@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards row</title>
+    <title>Grid Layout Example</title>
     <style>
         body {
             margin: 0;
@@ -11,14 +11,17 @@
             background-color: #f0f0f0;
         }
         .wrapper {
-            display: flex;
-            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* grid-template-rows: repeat(1, 1fr); */
+            gap: 20px;
+            padding: 20px;
             background-color: #f0f0f0;
         }
-        .my-box {
+         .my-box {
             background-color: #fff;
-            height: 50vh;
-            width: 300px;
+            height: auto;
+            width: auto;
             margin: 20px 20px 20px 20px;
             padding: 20px;
             border-radius: 8px;
@@ -40,7 +43,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
-        }
+        } 
         @media (max-width: 768px) {
             .wrapper {
                 flex-direction: column;
@@ -50,13 +53,13 @@
                 width: 90%;
                 margin: 20px 0;
             }
-        }
+        } 
 
-        h1 {
+         h1 {
             font-size: 24px;
             margin-bottom: 10px;
-        }
-        p {
+        } 
+         p {
             font-size: 16px;
             color: #555;
         }
@@ -69,12 +72,32 @@
             transition: background-color 0.3s ease;
             margin-left: auto;
             margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
             display: block;
         }
         button:hover {
             background-color: #e4e4e4;
             color: black;
             cursor: pointer;
+        } 
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        @media screen and (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                align-content: center;
+            }
+            .my-box {
+                width: auto;
+                margin: 10px 0;
+            }            
         }
     </style>
 </head>
@@ -108,15 +131,33 @@
             <button>View Details</button>
         </div>
     </div>
-    <!-- Grid container --> 
-     <h1>Movie card with Grid</h1>
-    <div class="wrapper">
+
+    <!-- grid cards down side -->
+    <h1>Movie card with Grid</h1>
+    <div class="grid-container">
         <div class="my-box" id="card5">
             <h1>Card 5</h1>
             <div class="img" style="background-image: url(blackwidow.jpg);"></div>
             <p>This is a card with a grid layout.</p>
             <button>View Details</button>
         </div>
+        <div class="my-box" id="card6">
+            <h1>Card 6</h1>
+            <div class="img" style="background-image: url(avengers.jpg);"></div>
+            <p>This is another card in the grid layout.</p>
+            <button>View Details</button>
+        </div>
+        <div class="my-box" id="card7">
+            <h1>Card 7</h1>
+            <div class="img" style="background-image: url(spiderman.jpg);"></div>
+            <p>This is yet another card in the grid layout.</p>
+            <button>View Details</button>
+        </div>
     </div>
+
+
+    <!-- keyframes
+    pseudoclass
+    pseudo-element and column -->
 </body>
 </html>
