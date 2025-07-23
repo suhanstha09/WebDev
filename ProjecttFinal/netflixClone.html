@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="netflixClone.css">
+</head>
+<body>
+    <script src="netflixClone.js" defer></script>
+
+    <div class="hero">
+        <div class="overlay"></div>
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo">
+        <button class="sign-in-btn" id="login">Sign In</button>
+        <div class="hero-content">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <h2>Watch anywhere. Cancel anytime.</h2>
+            <p style="font-size:1.2rem; margin-bottom:20px;">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="email-form">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Get Started &gt;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Netflix Cards Section -->
+    <section class="cards-section">
+        <div class="cards-row">
+            <div class="card">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="Enjoy on your TV">
+                <div class="card-title">Enjoy on your TV</div>
+                <div class="card-desc">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</div>
+            </div>
+            <div class="card">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Download your shows">
+                <div class="card-title">Download your shows to watch offline</div>
+                <div class="card-desc">Save your favorites easily and always have something to watch.</div>
+            </div>
+            <div class="card">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="Watch everywhere">
+                <div class="card-title">Watch everywhere</div>
+                <div class="card-desc">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trending Now Section -->
+    <section class="cards-section" style="padding-top:40px;">
+        <h2 style="color:#fff; font-size:2rem; font-weight:700; margin-bottom:30px; text-align:center;">Trending Now</h2>
+        <div class="cards-row">
+            <div class="card">
+                <img src="strangerthings.jpg" alt="Stranger Things">
+                <div class="card-title">Stranger Things</div>
+                <div class="card-desc">A group of kids uncover supernatural mysteries in their small town.</div>
+            </div>
+            <div class="card">
+                <img src="moneyheist.jpg" alt="Money Heist">
+                <div class="card-title">Money Heist</div>
+                <div class="card-desc">A criminal mastermind plans the biggest heist in history.</div>
+            </div>
+            <div class="card">
+                <img src="thewitcher.jpg" alt="The Witcher">
+                <div class="card-title">The Witcher</div>
+                <div class="card-desc">A monster hunter struggles to find his place in a world where people are often more wicked than beasts.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- new div section for cards row taught by tech brofessor
+    <div class="wrapper">
+        <div class="my-box" id="card1" >
+            <h1>Cards Row</h1>
+            <div class="img" style="background-image: url(cat.jpg);"></div>
+            <p>This is a simple example of a row of cards.</p>
+            <button>View Details</button>
+        </div>
+        <div class="my-box" id="card2">
+            <h1>Card 2</h1>
+            <div class="img">
+                <img src="moneyheist.jpg" alt="moneyheistImage">
+            </div>
+            <p>This is another card in the row.</p>
+            <button>View Details</button>
+        </div>
+        <div class="my-box" id="card3">
+            <h1>Card 3</h1>
+            <div class="img" style="background-image: url(strangerthings.jpg);"></div>
+            <p>This is yet another card in the row.</p>
+            <button>View Details</button>
+        </div>
+        <div class="my-box" id="card4">
+            <h1>Card 4</h1>
+            <div class="img" style="background-image: url(thewitcher.jpg);"></div>
+            <p>This is the last card in the row.</p>
+            <button>View Details</button>
+        </div>
+    </div> -->
+</body>
+</html>

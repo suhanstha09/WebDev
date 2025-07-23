@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'segoe UI';
+}
+
+body{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(226, 226, 218);
+}
+
+#dabba{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#movieInput{
+    border-radius: 0.5rem;
+    border: none;
+    height: 2rem;
+    width: 13.5rem;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#movieInput::placeholder{
+    font-size: 1rem;
+    padding-left: 22.5%;
+}
+
+#searchBtn{
+    border-radius: 0.5rem;
+    border: none;
+    height: 2rem;
+    width: 5.5rem;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #33cd33;
+    font-size: 1rem;
+    color: white;
+}

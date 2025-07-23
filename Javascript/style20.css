@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(203, 195, 184);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+.buttn{
+    padding: 10px;
+    width: 150px;
+    /* height: 30px; */
+    /* background-color: aqua; */
+    background-color: #786D5F50;
+    border-radius: 10px;
+    font-size: 25px;
+    /* margin-left: 25%; */
+}
+p{
+    margin-left: 20px;
+}
+#subbtn{
+    /* padding: 10px;
+    font: 14px; */
+    height: 45px;
+    width: 180px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 7px 0 17px -2px red;
+    /* margin-top: 150px; */
+    /* margin-right: 250px; */
+    margin-left: 32%;
+    background-color: aqua;
+}
+#item-input{
+    font-size: 18px;
+    height: 35px;
+    width: 500px;
+    /* margin-top: 140px; */
+    /* margin-right: 10px; */
+    /* margin-left: 15px; */
+    border-radius: 12px;
+    margin-left: 5%;
+}
+
+.labinpitem{
+    /* padding: 40px 20px; */
+    font-size: 35px;
+    font-family: "poppins", sans-serif;
+    /* width: 90%; */
+    /* max-width: 600px; */
+    justify-content: center;
+    margin-left: 25%;
+    /* margin-bottom: 30%; */
+}
+#boxaa{
+    padding: 40px 20px;
+    /* font-size: 35px; */
+    /* font-family: "poppins", sans-serif; */
+    width: 90%;
+    max-width: 600px;
+    background-color: rgb(225, 222, 218);
+    border-radius: 15px;
+    box-shadow: 10px 0 19px -0.5px rgb(168, 160, 129);
+}
+
+/* #comment-list{
+    position: absolute; */
+    /* background-color: #786D5F50; */
+    /* padding: 18px 24px; */
+    /* border-left: 6px solid #786D5d; */
+    /* border-radius: 12px; */
+    /* margin-top: 30px;
+    align-items: left; */
+     /* transition: backgroun; */
+/* }
+
+.comment{
+    position: absolute;
+    background-color: #78845f50;
+    padding: 18px 24px;
+    border-left: 6px solid #786D5d;
+    border-radius: 12px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 16px;
+} */
+
+#comment-list {
+    padding: 18px 24px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;  
+           /* ensures vertical stacking */
+    gap: 16px; /* adds spacing between comments */
+}
+
+.comment {
+    position: relative; /* or just remove this entirely */
+    background-color: #78845f50;
+    padding: 12px 18px;
+    border-left: 6px solid #786D5d;
+    border-right: 6px solid #786D5d;
+    border-radius: 12px;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
+
+
+
+/* #ansInput{
+    font-size: 25px;
+    background-color: beige;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    height: 50px;
+    margin-top: 20px;
+} */
+
+.delete-btn{
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.edit-btn{
+    justify-content: flex-end;
+    color: #786D5d;
+    font-size: 22px;
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+#area{
+    /* background-color: aqua; */
+
+    padding: 7px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    cursor: pointer;
+}
+
+
+
+#in{
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    /* border: 1px; */
+    background-color: rgb(245, 241, 236);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
