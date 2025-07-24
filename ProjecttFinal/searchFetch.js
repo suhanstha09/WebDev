@@ -31,10 +31,30 @@ searchbtn.addEventListener("click",async()=>{
         return
     }
     
-    const response = await fetch(`https://www.omdbapi.com/?s=${movieName}&apikey=${APIKEY}`)
+    try {
+         const response = await fetch(`https://www.omdbapi.com/?s=${movieName}&apikey=${APIKEY}`)
     const data = await response.json()
-    console.log(data)
-})
+    if(data.Response === "True"){
+        movieContainer.innerHTML = data.Search.map((movie)=>{
+            return `<div class="movie-card">
+                <img src="${movie.Poster !== 'N/A' ? movie.Poster : ""}" alt="movie">
+                <h4>${movie.Title}</h4>
+                <p>Year: ${movie.Year}</p>
+            </div>`;
+        }).join("")
+    }
+    else{
+        movieContainer.innerHTML = `<p>>No movies found</p>`
+    }
+  
+    }
+     catch (error){
+      movieContainer.innerHTML = `<p>Error fetching data:</p>`
+      console.error(error)
+    }
+
+    })
+
 
 
 // --------------------------------------------Name string garney tarika-----------------------------------------------------------

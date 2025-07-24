@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix Login validation</title>
+  <link rel="stylesheet" href="form23.css">
+</head>
+<body>
+    <script src="register.js" defer></script>
+
+  <form id="validation" class="login-container">
+    <h1>Register:</h1>
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="userPass" placeholder="Password" required />
+    <span id="toggle1" class="toggle1" onclick="togglePassword()">👁️</span>
+    <input type="password" id="confirmPass" placeholder="Confirm Password" required />
+    <span id="toggle2" class="toggle2" onclick="toggleConfirmPassword()">👁️</span>
+    <div id="message"></div>
+    <button type="submit">Register Now:</button>
+  <a href="checkform23.html"> <button type="button" id="loginButton" >Login</button></a>
+  </form>
+
+</body>
+</html>

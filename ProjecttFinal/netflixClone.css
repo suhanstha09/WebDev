@@ -129,6 +129,7 @@ body {
             padding: 60px 0;
             border-top: 8px solid #222;
             border-bottom: 8px solid #222;
+            
         }
         .cards-row {
             display: flex;
@@ -155,6 +156,7 @@ body {
             text-align: center;
             padding: 30px 20px;
             transition: transform 0.2s;
+            cursor: pointer;
 
             width: 300px;
             height: 420px;
