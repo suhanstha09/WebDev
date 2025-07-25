@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .circle {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    body {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <p>Move your mouse to see its position.</p>
+  <p id="screen-log"></p>
+
+  <script>
+    let screenLog = document.querySelector("#screen-log");
+    document.addEventListener("mousemove", logKey);
+
+    function logKey(e) {
+      screenLog.innerText = `
+        Screen X/Y: ${e.screenX}, ${e.screenY}
+        Client X/Y: ${e.clientX}, ${e.clientY}`;
+    }
+
+    let oldCircle = null;
+
+    function getRandomColor() {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      let brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+      if (brightness > 220) {
+        r -= 50;
+        g -= 50;
+        b -= 50;
+      }
+
+      r = Math.max(0, r);
+      g = Math.max(0, g);
+      b = Math.max(0, b);
+
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    document.addEventListener("click", function(e) {
+      if (oldCircle) {
+        oldCircle.remove();
+      }
+
+      const circle = document.createElement("div");
+      circle.classList.add("circle");
+
+      const randomColor = getRandomColor();
+      circle.style.backgroundColor = randomColor;
+
+      circle.style.left = `${e.clientX}px`;
+      circle.style.top = `${e.clientY}px`;
+
+      document.body.appendChild(circle);
+      oldCircle = circle;
+    });
+  </script>
+</body>
+</html>
